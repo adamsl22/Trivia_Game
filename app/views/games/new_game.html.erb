@@ -1,0 +1,15 @@
+<h2>Select Players:</h2>
+<%= form_with url: game_user_path(@game.id) do |f| %>
+    <%= f.label :user %>
+    <%= f.collection_select :user_id, @users, :id, :user_name %>
+    <%= f.submit %>
+<%end%>
+<h2>Added Players:</h2>
+<% @game.users.each do |user| %>
+    <p><%= user.user_name %><p>
+<%end%>
+<% if @game.users.count > 0 %>
+    <%= button_to "Start", _, method: :get %>
+<%end%>
+<br><br>
+<%= button_to "Back", welcome_path, method: :get %>
