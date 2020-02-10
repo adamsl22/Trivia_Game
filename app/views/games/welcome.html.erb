@@ -1,7 +1,7 @@
 <h2>Adam Longman and Steven Zhu present</h2>
 <h1>Title TBD</h1>
 <br><br>
-<%= button_to "Begin Game", '/games/new', method: :get %>
+<%= button_to "Begin Game", new_game_path(@game), method: :get %>
 <br>
 <%= button_to "View User Profiles", '/users', method: :get %>
 <br>
