@@ -1,0 +1,13 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_name: MyString
+  password: MyString
+  lifetime_points: 1
+  level: 1
+
+two:
+  user_name: MyString
+  password: MyString
+  lifetime_points: 1
+  level: 1
