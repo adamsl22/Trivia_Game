@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_02_10_183324) do
+ActiveRecord::Schema.define(version: 2020_02_10_221155) do
 
   create_table "game_users", force: :cascade do |t|
     t.integer "game_id"
@@ -33,7 +33,7 @@ ActiveRecord::Schema.define(version: 2020_02_10_183324) do
 
   create_table "users", force: :cascade do |t|
     t.string "user_name"
-    t.string "password"
+    t.string "password_digest"
     t.integer "lifetime_points"
     t.integer "level"
     t.datetime "created_at", precision: 6, null: false

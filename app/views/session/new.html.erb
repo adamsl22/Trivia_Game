@@ -1,0 +1,12 @@
+<h1>Login To ******</h1>
+
+<% if flash[:errors] %>
+<%= flash[:errors][0] %>
+<% end %>
+
+
+<%= form_tag '/sessions' %>
+<%=text_field_tag "Username"%>
+<%=text_field_tag "Password"%>
+<%=submit_tag "Login"%>
+<% end %>
