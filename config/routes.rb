@@ -8,7 +8,7 @@ Rails.application.routes.draw do
   post '/games/:id/game_user', to: 'games#game_user', as: 'game_user'
 
   get '/signup', to: 'users#new', as: 'new_user'
-  post '/create_account', to: 'users#create'
+  post '/users', to: 'users#create'
   get '/profile', to: 'users#show', as: 'user'
   get '/users', to: 'users#index', as: 'index'
 

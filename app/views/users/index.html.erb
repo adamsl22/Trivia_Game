@@ -1,4 +1,5 @@
 <h1>All Players:</h1>
 <% @users.each do |u| %>
-    <%= link_to u.user_name, user_path(u) %>
+    <p><%= link_to u.user_name, user_path(u) %>
+         |     Lifetime Points: <%= u.lifetime_points %>     |    Level: <%= u.level %></p>
 <% end %>

@@ -1,5 +1,7 @@
 class GamesController < ApplicationController
     
+    before_action :authorized, except: [:welcome]
+
     def welcome
         if Game.all.count == 0
             @game = Game.create(turn: 1, category_1: "empty", category_2: "empty", category_3: "empty", category_4: "empty", category_5: "empty")
