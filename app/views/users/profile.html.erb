@@ -3,6 +3,7 @@
     <%= @user.blurb %><br><br>
 <% end %>
 Lifetime Points: <%= @user.lifetime_points %><br>
-Level: <%= @user.level %><br><br>
-<%= button_to "Home", welcome_path, method: :get %><br><br>
+Level: <%= @user.level %><br><br><br>
+<%= button_to "Home", welcome_path, method: :get %><br>
+<%= button_to "Edit Account", edit_profile_path, method: :get %><br>
 <%= button_to "Log Out", '/logout', method: :delete %>

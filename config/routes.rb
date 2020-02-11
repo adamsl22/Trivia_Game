@@ -1,16 +1,18 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-  resources :games, only: [:show]
-  # resources :users
 
   get '/', to: 'games#welcome', as: 'welcome'
   get '/games/:id/new_game', to: 'games#new_game', as: 'new_game'
   post '/games/:id/game_user', to: 'games#game_user', as: 'game_user'
+  get 'games/:id/categories', to: 'games#categories', as: 'categories'
 
   get '/signup', to: 'users#new', as: 'new_user'
   post '/users', to: 'users#create'
-  get '/profile', to: 'users#show', as: 'user'
+  get '/:id/profile', to: 'users#show', as: 'user'
   get '/users', to: 'users#index', as: 'index'
+  get '/profile', to: 'users#profile', as: 'profile'
+  get '/edit_profile', to: 'users#edit', as: 'edit_profile'
+  patch '/:id/profile', to: 'users#update'
 
   get '/login', to: 'session#new', as: 'new_session'
   post '/sessions', to: 'session#create'

@@ -1,0 +1,10 @@
+<h1>Categories:</h1>
+<h2><%= @game.category_1 %> | <%= @game.category_2 %> | <%= @game.category_3 %> | <%= @game.category_4 %> | <%= @game.category_5 %></h2>
+Select Category and Difficulty:
+<%= form_with url: game_user_path(@game.id) do |f| %>
+    <%= f.label :category %>
+    <%= f.collection_select :category, @categories, :category %>
+    <%= f.label :difficulty %>
+    <%= f.collection_select :difficulty, @difficulties, :difficulty %>
+    <%= f.submit %>
+<%end%>

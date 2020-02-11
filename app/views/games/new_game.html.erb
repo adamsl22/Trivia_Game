@@ -4,12 +4,13 @@
     <%= f.collection_select :user_id, @users, :id, :user_name %>
     <%= f.submit %>
 <%end%>
+<%= button_to "Add a New Account", new_user_path, method: :get %>
 <h2>Added Players:</h2>
 <% @game.users.each do |user| %>
     <p><%= user.user_name %><p>
 <%end%>
 <% if @game.users.count > 0 %>
-    <%= button_to "Start", _, method: :get %>
+    <%= button_to "Start Game", categories_path(@game), method: :get %>
 <%end%>
 <br><br>
 <%= button_to "Back", welcome_path, method: :get %>
