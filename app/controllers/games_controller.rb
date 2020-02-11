@@ -13,6 +13,7 @@ class GamesController < ApplicationController
 
     def new_game
         GameUser.delete_all
+        OpenTDB.api
         @game = Game.find(params[:id])
         @game.update(category_1: "empty", category_2: "empty", category_3: "empty", category_4: "empty", category_5: "empty")
         existing_gu = GameUser.all.map{|gu| gu.user}
@@ -51,8 +52,6 @@ class GamesController < ApplicationController
         @user = GameUser.all.min_by{|u| u.turn}
         
     end
-
-    def guess
         #guess = params
 
 
