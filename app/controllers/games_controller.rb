@@ -6,6 +6,8 @@ class GamesController < ApplicationController
             @game = Game.find_by(id: 1)
         end
     end
+
+
     def new_game
         GameUser.delete_all
         @game = Game.find(params[:id])
@@ -18,6 +20,8 @@ class GamesController < ApplicationController
             end
         end
     end
+
+
     def game_user
         @game = Game.find(params[:id])
         u_id = game_user_params(:user_id)[:user_id]
@@ -25,7 +29,10 @@ class GamesController < ApplicationController
         redirect_to new_game_path(@game)
     end
 
+
+    
     private
+
     def game_user_params(*args)
         params.require(:game_user).permit(*args)
     end
