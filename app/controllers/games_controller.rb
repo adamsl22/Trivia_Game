@@ -1,6 +1,4 @@
 class GamesController < ApplicationController
-    
-    before_action :authorized, except: [:welcome]
 
     def welcome
         if Game.all.count == 0

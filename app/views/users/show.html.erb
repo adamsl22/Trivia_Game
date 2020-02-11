@@ -1,3 +1,4 @@
 <h1><%= @user.user_name %> </h1>
 Lifetime Points: <%= @user.lifetime_points %><br>
-Level: <%= @user.level %>
+Level: <%= @user.level %><br>
+<%= button_to "Log Out", '/logout', method: :delete %>

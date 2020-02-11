@@ -8,5 +8,6 @@
 <% if session[:user_id] %>
     <%= button_to "My Profile", user_path(@user), method: :get %>
 <% else %>
-    <%= button_to "Create New Profile", '/signup', method: :get %>
+    <%= button_to "Create New Profile", '/signup', method: :get %><br>
+    <%= button_to "Log In", '/login', method: :get %>
 <% end %>

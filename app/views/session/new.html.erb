@@ -1,12 +1,13 @@
-<h1>Login To ******</h1>
+<h1>Log In</h1>
 
 <% if flash[:errors] %>
-<%= flash[:errors][0] %>
+<%= flash[:errors] %>
 <% end %>
 
 
 <%= form_tag '/sessions' %>
-<%=text_field_tag "Username"%>
-<%=text_field_tag "Password"%>
+<%=label_tag "Username"%>
+<%=text_field_tag "user_name"%>
+<%=label_tag "Password"%>
+<%=password_field_tag "password"%>
 <%=submit_tag "Login"%>
-<% end %>
