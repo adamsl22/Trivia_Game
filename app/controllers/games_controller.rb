@@ -13,7 +13,7 @@ class GamesController < ApplicationController
         existing_gu = GameUser.all.map{|gu| gu.user}
         @users = []
         User.all.each do |u|
-            if !gu.include?(existing_gu)
+            if !existing_gu.include?(u)
                 @users << u
             end
         end
@@ -27,7 +27,7 @@ class GamesController < ApplicationController
 
     private
     def game_user_params(*args)
-        params.require(:game_user).permit(*args)
+        params.permit(*args)
     end
         
 end
