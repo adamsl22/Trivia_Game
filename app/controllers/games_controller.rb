@@ -13,7 +13,6 @@ class GamesController < ApplicationController
     end
 
     def new_game
-        OpenTDB.api
         @game = Game.find(params[:id])
         @game.update(category_1: Game.cat_1, category_2: Game.cat_2, category_3: Game.cat_3, category_4: Game.cat_4, category_5: Game.cat_5)
         existing_gu = GameUser.all.map{|gu| gu.user}
