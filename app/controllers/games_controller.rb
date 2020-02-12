@@ -40,6 +40,12 @@ class GamesController < ApplicationController
     end
 
     def api_request
+        @game = Game.find(params[:id])
+        cat_string = api_params(:category)[:category]
+        cat = Game.cat_to_num(cat_string)
+        dif = api_params(:difficulty)[:difficulty]
+        q_hash = OpenTDB.seach_question(cat, dif)
+        
     end
 
 
