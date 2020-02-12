@@ -2,6 +2,50 @@ class Game < ApplicationRecord
     has_many :game_users
     has_many :users, through: :game_users
 
+    validates :target_points, numericality: {greater_than_or_equal_to: 100, message: "error: The target score must be at least 100 (the minimum number of points for a question)."}
+
+    def winning_player
+        self.game_users.max_by{|gu| gu.score}
+    end
+
+    def check_for_win(player)
+        if self.winning_player.score >= self.target_points && self.game_users[-1] == player
+            return true
+        else
+            return false
+        end
+    end
+
+    def self.question_category(question_hash)
+        question_hash[0]["category"]
+    end
+    def self.points_value(question_hash)
+        difficulty = question_hash[0]["difficulty"].capitalize
+        if difficulty == "Easy"
+            value = 100
+        elsif difficulty == "Medium"
+            value = 300
+        elsif difficulty == "Hard"
+            value = 500
+        end
+        return value
+    end
+    def self.question_text(question_hash)
+        question_hash[0]["question"]
+    end
+    def self.correct_answer(question_hash)
+        question_hash[0]["correct_answer"]
+    end
+    def self.incorrect_answer1(question_hash)
+        question_hash[0]["incorrect_answers"][0]
+    end
+    def self.incorrect_answer2(question_hash)
+        question_hash[0]["incorrect_answers"][1]
+    end
+    def self.incorrect_answer3(question_hash)
+        question_hash[0]["incorrect_answers"][2]
+    end
+
     def self.cat_1
         #Screen and Stage
         arr = [11,13,14,26,32]
@@ -86,7 +130,7 @@ class Game < ApplicationRecord
         return cat_5
     end
 
-    def cat_to_num(cat)
+    def self.cat_to_num(cat)
         if cat == "Entertainment: Film"
             num = 11
         elsif cat == "Entertainment: Musicals & Theatres"

@@ -11,7 +11,7 @@
     <p><%= user.user_name %><p>
 <%end%>
 <% if @game.users.count > 0 %>
-    <%= button_to "Start Game", categories_path(@game), method: :get %>
+    <%= button_to "Start Game", target_points_path(@game), method: :get %>
 <%end%>
 <br><br>
 <%= button_to "Back", welcome_path, method: :get %>
