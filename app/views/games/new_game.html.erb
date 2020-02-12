@@ -2,6 +2,7 @@
 <%= form_with url: game_user_path(@game.id) do |f| %>
     <%= f.label :user %>
     <%= f.collection_select :user_id, @users, :id, :user_name %>
+    <%= f.hidden_field :game_id, value: @game.id %>
     <%= f.submit %>
 <%end%>
 <%= button_to "Add a New Account", new_user_path, method: :get %>

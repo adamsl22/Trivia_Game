@@ -5,6 +5,8 @@ Rails.application.routes.draw do
   get '/games/:id/new_game', to: 'games#new_game', as: 'new_game'
   post '/games/:id/game_user', to: 'games#game_user', as: 'game_user'
   get 'games/:id/categories', to: 'games#categories', as: 'categories'
+  post 'games/:id/api_request', to: 'games#api_request', as: 'api_request'
+  get 'games/:id/question', to: 'games#question', as: 'question'
 
   get '/signup', to: 'users#new', as: 'new_user'
   post '/users', to: 'users#create'

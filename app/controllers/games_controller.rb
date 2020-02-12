@@ -1,8 +1,9 @@
 class GamesController < ApplicationController
 
     def welcome
+        GameUser.delete_all
         if Game.all.count == 0
-            @game = Game.create(category_1: "empty", category_2: "empty", category_3: "empty", category_4: "empty", category_5: "empty")
+            @game = Game.create(category_1: Game.cat_1, category_2: Game.cat_2, category_3: Game.cat_3, category_4: Game.cat_4, category_5: Game.cat_5)
         else
             @game = Game.find_by(id: 1)
         end
@@ -12,10 +13,9 @@ class GamesController < ApplicationController
     end
 
     def new_game
-        GameUser.delete_all
         OpenTDB.api
         @game = Game.find(params[:id])
-        @game.update(category_1: "empty", category_2: "empty", category_3: "empty", category_4: "empty", category_5: "empty")
+        @game.update(category_1: Game.cat_1, category_2: Game.cat_2, category_3: Game.cat_3, category_4: Game.cat_4, category_5: Game.cat_5)
         existing_gu = GameUser.all.map{|gu| gu.user}
         @users = []
         User.all.each do |u|
@@ -38,14 +38,11 @@ class GamesController < ApplicationController
         @user = gu.user
         @turn = gu.turn
         @score = gu.score
-        @categories = []
-        @categories << @game.category_1
-        @categories << @game.category_2
-        @categories << @game.category_3
-        @categories << @game.category_4
-        @categories << @game.category_5
-        @difficulties = ["Easy", "Medium", "Hard"]
     end
+
+    def api_request
+    end
+
 
     def question
         @game = Game.find(params[:id])
@@ -59,6 +56,9 @@ class GamesController < ApplicationController
     private
 
     def game_user_params(*args)
+        params.permit(*args)
+    end
+    def api_params(*args)
         params.permit(*args)
     end
         
