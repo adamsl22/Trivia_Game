@@ -3,7 +3,7 @@ class GamesController < ApplicationController
     def welcome
         GameUser.delete_all
         if Game.all.count == 0
-            @game = Game.create(category_1: Game.cat_1, category_2: Game.cat_2, category_3: Game.cat_3, category_4: Game.cat_4, category_5: Game.cat_5, target_points: 0)
+            @game = Game.create(category_1: Game.cat_1, category_2: Game.cat_2, category_3: Game.cat_3, category_4: Game.cat_4, category_5: Game.cat_5, target_points: 0, token: "")
         else
             @game = Game.find_by(id: 1)
         end
@@ -37,7 +37,8 @@ class GamesController < ApplicationController
 
     def update_tp
         @game = Game.find(params[:id])
-        @game.update(category_1: Game.cat_1, category_2: Game.cat_2, category_3: Game.cat_3, category_4: Game.cat_4, category_5: Game.cat_5, target_points: game_params(:target_points)[:target_points])
+        token = OpenTDB.new_session_key
+        @game.update(category_1: Game.cat_1, category_2: Game.cat_2, category_3: Game.cat_3, category_4: Game.cat_4, category_5: Game.cat_5, target_points: game_params(:target_points)[:target_points], token: token)
         if @game.valid?
             redirect_to categories_path(@game)
         else
@@ -59,7 +60,7 @@ class GamesController < ApplicationController
         cat_string = api_params(:category)[:category]
         cat = Game.cat_to_num(cat_string)
         dif = api_params(:difficulty)[:difficulty]
-        flash[:q_hash] = OpenTDB.search_question(cat, dif)
+        flash[:q_hash] = OpenTDB.search_question(cat, dif, @game.token)
         redirect_to question_path(@game)
     end
 
