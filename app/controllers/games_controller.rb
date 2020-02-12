@@ -63,6 +63,7 @@ class GamesController < ApplicationController
     def game_user_params(*args)
         params.permit(*args)
     end
+    
     def api_params(*args)
         params.permit(*args)
     end
