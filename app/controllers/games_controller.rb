@@ -13,7 +13,7 @@ class GamesController < ApplicationController
 
     def new_game
         GameUser.delete_all
-        OpenTDB.api
+        @token = OpenTDB.new_session_key
         @game = Game.find(params[:id])
         @game.update(category_1: "empty", category_2: "empty", category_3: "empty", category_4: "empty", category_5: "empty")
         existing_gu = GameUser.all.map{|gu| gu.user}
