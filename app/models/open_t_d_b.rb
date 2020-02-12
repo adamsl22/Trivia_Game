@@ -14,11 +14,12 @@ class OpenTDB
         response.parse["token"]
     end
 
-    def self.search_question(category_num, difficulty)
+    def self.search_question(category_num, difficulty, token)
         url = "#{API_HOST}"
         params = {
             category: category_num,
-            difficulty: difficulty
+            difficulty: difficulty,
+            token: token
         }
         response = HTTP.get(url, params: params)
         response.parse["results"]
