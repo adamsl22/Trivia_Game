@@ -31,7 +31,8 @@ class Game < ApplicationRecord
         return value
     end
     def self.question_text(question_hash)
-        question_hash[0]["question"]
+        string = question_hash[0]["question"]
+        string.gsub(/&quot;|&#039;/, "")
     end
     def self.correct_answer(question_hash)
         question_hash[0]["correct_answer"]
