@@ -13,7 +13,7 @@ class User < ApplicationRecord
         self.increment_level
     end
     def increment_level
-        if self.lifetime_points > 1000 + 200 * 2 ** self.level
+        if self.lifetime_points > 1000 + 200 * 3 ** self.level
             new_level = self.level + 1
             self.update_attribute(:level, new_level)
         end

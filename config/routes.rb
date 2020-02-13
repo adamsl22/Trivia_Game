@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get 'games/:id/result', to: 'games#result', as: 'result'
   post 'games/:id/end_turn', to: 'games#end_turn', as: 'end_turn'
   get 'games/:id/winner', to: 'games#winner', as: 'winner'
+  get 'games/:id/no_more_questions', to: 'games#no_more_questions', as: 'no_more_questions'
 
   get '/signup', to: 'users#new', as: 'new_user'
   post '/users', to: 'users#create'

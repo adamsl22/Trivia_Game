@@ -71,13 +71,18 @@ class GamesController < ApplicationController
         @turn = @gu.turn
         @score = @gu.score
         q_hash = flash[:q_hash]
-        if !q_hash
-            redirect_to categories_path(@game)
+        if q_hash == []
+            redirect_to no_more_questions_path(@game)
+        else
+            @cat = Game.question_category(q_hash)
+            @value = Game.points_value(q_hash)
+            @question = Game.question_text(q_hash)
+            @answers = [[Game.correct_answer(q_hash), @value], [Game.incorrect_answer1(q_hash), 0], [Game.incorrect_answer2(q_hash), 0], [Game.incorrect_answer3(q_hash), 0]]
         end
-        @cat = Game.question_category(q_hash)
-        @value = Game.points_value(q_hash)
-        @question = Game.question_text(q_hash)
-        @answers = [[Game.correct_answer(q_hash), @value], [Game.incorrect_answer1(q_hash), 0], [Game.incorrect_answer2(q_hash), 0], [Game.incorrect_answer3(q_hash), 0]]
+    end
+
+    def no_more_questions
+        @game = Game.find(params[:id])
     end
 
     def guess

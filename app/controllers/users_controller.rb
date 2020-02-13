@@ -31,7 +31,8 @@ class UsersController < ApplicationController
     end
 
     def index
-        @users = User.all
+        array = User.all.sort_by{|u| u.lifetime_points}
+        @users = array.reverse
     end
 
     def edit

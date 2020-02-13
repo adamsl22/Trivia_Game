@@ -3,7 +3,7 @@
 <br><br>
 <%= button_to "Begin Game", new_game_path(@game), method: :get %>
 <br>
-<%= button_to "View User Profiles", index_path, method: :get %>
+<%= button_to "Leaderboard", index_path, method: :get %>
 <br>
 <% if session[:user_id] %>
     <%= button_to "My Profile", user_path(@user), method: :get %>
