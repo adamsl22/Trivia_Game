@@ -7,7 +7,7 @@
     <%= form_with url: guess_path(@game.id) do |f| %>
         <%= f.hidden_field :correct, value: answer[1] %>
         <%= f.submit answer[0] %>
-    <%end%>
+    <%end%><br>
 <%end%>
 <br><br>
 <%= button_to "Back", categories_path(@game), method: :get %>

@@ -5,8 +5,7 @@ class GameUser < ApplicationRecord
     def increase_score_by(value)
         new_score = self.score + value
         self.update(score: new_score)
-        new_lp = self.user.lifetime_points + value
-        self.user.update(lifetime_points: new_lp)
+        self.user.increase_lp_by(value)
     end
     def increment_turn
         new_turn = self.turn + 1
