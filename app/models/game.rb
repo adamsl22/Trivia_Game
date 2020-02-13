@@ -31,20 +31,19 @@ class Game < ApplicationRecord
         return value
     end
     def self.question_text(question_hash)
-        string = question_hash[0]["question"]
-        string.gsub(/&quot;|&#039;/, "")
+        question_hash[0]["question"].gsub(/&quot;|&#039;|&|amp;/, "")
     end
     def self.correct_answer(question_hash)
-        question_hash[0]["correct_answer"]
+        question_hash[0]["correct_answer"].gsub(/&quot;|&#039;|&|amp;/, "")
     end
     def self.incorrect_answer1(question_hash)
-        question_hash[0]["incorrect_answers"][0]
+        question_hash[0]["incorrect_answers"][0].gsub(/&quot;|&#039;|&|amp;/, "")
     end
     def self.incorrect_answer2(question_hash)
-        question_hash[0]["incorrect_answers"][1]
+        question_hash[0]["incorrect_answers"][1].gsub(/&quot;|&#039;|&|amp;/, "")
     end
     def self.incorrect_answer3(question_hash)
-        question_hash[0]["incorrect_answers"][2]
+        question_hash[0]["incorrect_answers"][2].gsub(/&quot;|&#039;|&|amp;/, "")
     end
 
     def self.cat_1

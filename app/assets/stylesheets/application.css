@@ -13,3 +13,13 @@
  *= require_tree .
  *= require_self
  */
+
+ /* body  {
+    background-image: url('/assets/images/triva.png');
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}       */
+
+
