@@ -3,7 +3,7 @@ class GamesController < ApplicationController
     def welcome
         GameUser.delete_all
         if Game.all.count == 0
-            @game = Game.create(category_1: Game.cat_1, category_2: Game.cat_2, category_3: Game.cat_3, category_4: Game.cat_4, category_5: Game.cat_5, target_points: 0, token: "")
+            @game = Game.create(category_1: Game.cat_1, category_2: Game.cat_2, category_3: Game.cat_3, category_4: Game.cat_4, category_5: Game.cat_5, target_points: 1500, token: "")
         else
             @game = Game.find_by(id: 1)
         end
