@@ -1,7 +1,7 @@
 <% if @draw == true %>
-    <h1>Draw!</h1>
+    <h1 class="welcome">Draw!</h1>
 <% else %>
-    <h1><%= @winner %> wins!</h1>
+    <h1 class="welcome"><%= @winner %> wins!</h1>
 <%end%>
 <br><br>
-<%= button_to "End", welcome_path, method: :get %>
+<%= button_to "End", welcome_path, method: :get, class: "signup_btn" %>
