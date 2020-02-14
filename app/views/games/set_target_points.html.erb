@@ -1,4 +1,4 @@
-<h1>Set target score:</h1>
+<h1 class="target_head">Set target score:</h1>
 <%= form_for @game, :url => update_tp_path(@game) do |f| %>
     <%= f.number_field :target_points %>
     <%= f.submit %>
@@ -8,4 +8,4 @@
     <%= error %>
   <% end %>
 <% end %>
-<h2>When a player reaches the target score, the game will end after the last player's turn of that round. Whichever player has the highest score wins.</h2>
+<h2 class="target">When a player reaches the target score, the game will end after the last player's turn of that round. Whichever player has the highest score wins.</h2>

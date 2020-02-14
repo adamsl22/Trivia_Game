@@ -1,13 +1,13 @@
-<h2>Adam Longman and Steven Zhu present</h2>
-<h1>Best Guess It</h1>
+<h2 class="welcome">Adam Longman and Steven Zhu present</h2>
+<h1 class="welcome">Best Guess It</h1>
 <br><br>
-<%= button_to "Begin Game", new_game_path(@game), method: :get %>
+<%= button_to "Begin Game", new_game_path(@game), method: :get, class: "btntowel" %>
 <br>
-<%= button_to "Leaderboard", index_path, method: :get %>
+<%= button_to "Leaderboard", index_path, method: :get, class: "btntowel" %>
 <br>
 <% if session[:user_id] %>
-    <%= button_to "My Profile", user_path(@user), method: :get %>
+    <%= button_to "My Profile", user_path(@user), method: :get, class: "btntowel" %>
 <% else %>
-    <%= button_to "Create New Profile", '/signup', method: :get %><br>
-    <%= button_to "Log In", '/login', method: :get %>
+    <%= button_to "Create New Profile", '/signup', method: :get, class: "btntowel" %><br>
+    <%= button_to "Log In", '/login', method: :get, class: "btntowel" %>
 <% end %>

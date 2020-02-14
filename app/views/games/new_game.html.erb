@@ -1,4 +1,4 @@
-<h2>Select Players:</h2>
+<h2 class="select">Select Players:</h2>
 <%= form_with url: game_user_path(@game.id) do |f| %>
     <%= f.label :user %>
     <%= f.collection_select :user_id, @users, :id, :user_name %>
@@ -6,9 +6,9 @@
     <%= f.submit %>
 <%end%>
 <%= button_to "Add a New Account", new_user_path, method: :get %>
-<h2>Added Players:</h2>
+<h2 class="select_add">Added Players:</h2>
 <% @game.users.each do |user| %>
-    <p><%= user.user_name %><p>
+    <p class="name"><%= user.user_name %><p>
 <%end%>
 <% if @game.users.count > 0 %>
     <%= button_to "Start Game", target_points_path(@game), method: :get %>

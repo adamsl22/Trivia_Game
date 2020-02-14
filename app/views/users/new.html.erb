@@ -1,14 +1,14 @@
-<h1>Sign Up</h1>
+<h1 class="signup">Sign Up</h1>
 
-<p>Please enter a username and password to signup.</p>
+<p class="signup">Please enter a username and password to signup.</p>
 
 <%= form_for @user do |f| %>
-  <%= f.label :user_name, "Username" %>
+  <%= f.label :user_name, "Username", class: "signup_f" %>
   <%= f.text_field :user_name %>
-  <%= f.label :password, "Password" %>
+  <%= f.label :password, "Password", class: "signup_f" %>
   <%= f.password_field :password %>
 
-  <%= f.submit "Create New Account"%>
+  <%= f.submit "Create New Account", class: "signup_btn"%>
 <% end %>
 <% if @errors %>
   <% @errors.each do |error| %>
