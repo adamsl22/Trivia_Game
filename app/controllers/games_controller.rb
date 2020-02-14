@@ -51,6 +51,7 @@ class GamesController < ApplicationController
         @game = Game.find(params[:id])
         gu = GameUser.all.min_by{|u| u.turn}
         @user = gu.user
+        @gus = GameUser.all
         @turn = gu.turn
         @score = gu.score
     end
