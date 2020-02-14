@@ -3,9 +3,10 @@
 // You can use Sass (SCSS) here: https://sass-lang.com/
 .grid {
     display: grid;
-    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-columns: 19% 19% 19% 19% 19%;
     grid-template-rows: 25% 25% 25% 25%;
     grid-row-gap: 50px;
+    grid-column-gap: 15px;
     justify-items: center;
 }
 h1 {text-align: center;}
