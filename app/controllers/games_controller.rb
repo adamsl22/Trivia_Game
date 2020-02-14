@@ -115,6 +115,7 @@ class GamesController < ApplicationController
         @game = Game.find(params[:id])
         winning_gu = @game.winning_player
         @winner = winning_gu.user.user_name
+        @draw = @game.check_for_draw
     end
     
     private

@@ -1,3 +1,7 @@
-<h1><%= @winner %> wins!</h1>
+<% if @draw == true %>
+    <h1>Draw!</h1>
+<% else %>
+    <h1><%= @winner %> wins!</h1>
+<%end%>
 <br><br>
 <%= button_to "End", welcome_path, method: :get %>
