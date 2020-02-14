@@ -1,3 +1,27 @@
 // Place all the styles related to the Users controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+h1.signup   {
+    color: #111; 
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 45px; font-weight: bold; 
+    letter-spacing: -1px; 
+    text-align: center;
+}
+
+p.signup    {
+    color: #111; 
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 20px; font-weight: bold; 
+    letter-spacing: -1px; 
+    text-align: center;
+}
+
+.signup_f   {
+    color: #111; 
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    letter-spacing: -1px; 
+    text-align: center;
+}

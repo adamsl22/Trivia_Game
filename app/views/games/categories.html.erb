@@ -1,86 +1,86 @@
-<h2>Round: <%= @turn %> - Player: <%= @user.user_name %> - Score: <%= @score %></h2>
-<h1>Categories:</h1>
+<h2 class="q_head">Round: <%= @turn %> - Player: <%= @user.user_name %> - Score: <%= @score %></h2>
+<h2 class="cat">Categories:</h2>
 <br><br>
 <div class="grid">
-    <div class="grid-item"><%= @game.category_1 %></div>
-    <div class="grid-item"><%= @game.category_2 %></div>
-    <div class="grid-item"><%= @game.category_3 %></div>
-    <div class="grid-item"><%= @game.category_4 %></div>
-    <div class="grid-item"><%= @game.category_5 %></div>
-    <div class="grid-item"><%= form_with url: api_request_path(@game.id) do |f| %>
+    <div class="grid-item-cat"><%= @game.category_1 %></div>
+    <div class="grid-item-cat"><%= @game.category_2 %></div>
+    <div class="grid-item-cat"><%= @game.category_3 %></div>
+    <div class="grid-item-cat"><%= @game.category_4 %></div>
+    <div class="grid-item-cat"><%= @game.category_5 %></div>
+    <div class="grid-item-button"><%= form_with url: api_request_path(@game.id) do |f| %>
         <%= f.hidden_field :category, value: @game.category_1 %>
         <%= f.hidden_field :difficulty, value: "easy" %>
-        <%= f.submit "100" %>
+        <%= f.submit "100", class: 'cat_btn' %>
     <%end%></div>
-    <div class="grid-item"><%= form_with url: api_request_path(@game.id) do |f| %>
+    <div class="grid-item-button"><%= form_with url: api_request_path(@game.id) do |f| %>
         <%= f.hidden_field :category, value: @game.category_2 %>
         <%= f.hidden_field :difficulty, value: "easy" %>
-        <%= f.submit "100" %>
+        <%= f.submit "100", class: 'cat_btn' %>
     <%end%></div>
-    <div class="grid-item"><%= form_with url: api_request_path(@game.id) do |f| %>
+    <div class="grid-item-button"><%= form_with url: api_request_path(@game.id) do |f| %>
         <%= f.hidden_field :category, value: @game.category_3 %>
         <%= f.hidden_field :difficulty, value: "easy" %>
-        <%= f.submit "100" %>
+        <%= f.submit "100", class: 'cat_btn' %>
     <%end%></div>
-    <div class="grid-item"><%= form_with url: api_request_path(@game.id) do |f| %>
+    <div class="grid-item-button"><%= form_with url: api_request_path(@game.id) do |f| %>
         <%= f.hidden_field :category, value: @game.category_4 %>
         <%= f.hidden_field :difficulty, value: "easy" %>
-        <%= f.submit "100" %>
+        <%= f.submit "100", class: 'cat_btn' %>
     <%end%></div>
-    <div class="grid-item"><%= form_with url: api_request_path(@game.id) do |f| %>
+    <div class="grid-item-button"><%= form_with url: api_request_path(@game.id) do |f| %>
         <%= f.hidden_field :category, value: @game.category_5 %>
         <%= f.hidden_field :difficulty, value: "easy" %>
-        <%= f.submit "100" %>
+        <%= f.submit "100", class: 'cat_btn' %>
     <%end%></div>
-    <div class="grid-item"><%= form_with url: api_request_path(@game.id) do |f| %>
+    <div class="grid-item-button"><%= form_with url: api_request_path(@game.id) do |f| %>
         <%= f.hidden_field :category, value: @game.category_1 %>
         <%= f.hidden_field :difficulty, value: "medium" %>
-        <%= f.submit "300" %>
+        <%= f.submit "300", class: 'cat_btn' %>
     <%end%></div>
-    <div class="grid-item"><%= form_with url: api_request_path(@game.id) do |f| %>
+    <div class="grid-item-button"><%= form_with url: api_request_path(@game.id) do |f| %>
         <%= f.hidden_field :category, value: @game.category_2 %>
         <%= f.hidden_field :difficulty, value: "medium" %>
-        <%= f.submit "300" %>
+        <%= f.submit "300", class: 'cat_btn' %>
     <%end%></div>
-    <div class="grid-item"><%= form_with url: api_request_path(@game.id) do |f| %>
+    <div class="grid-item-button"><%= form_with url: api_request_path(@game.id) do |f| %>
         <%= f.hidden_field :category, value: @game.category_3 %>
         <%= f.hidden_field :difficulty, value: "medium" %>
-        <%= f.submit "300" %>
+        <%= f.submit "300", class: 'cat_btn' %>
     <%end%></div>
-    <div class="grid-item"><%= form_with url: api_request_path(@game.id) do |f| %>
+    <div class="grid-item-button"><%= form_with url: api_request_path(@game.id) do |f| %>
         <%= f.hidden_field :category, value: @game.category_4 %>
         <%= f.hidden_field :difficulty, value: "medium" %>
-        <%= f.submit "300" %>
+        <%= f.submit "300", class: 'cat_btn' %>
     <%end%></div>
-    <div class="grid-item"><%= form_with url: api_request_path(@game.id) do |f| %>
+    <div class="grid-item-button"><%= form_with url: api_request_path(@game.id) do |f| %>
         <%= f.hidden_field :category, value: @game.category_5 %>
         <%= f.hidden_field :difficulty, value: "medium" %>
-        <%= f.submit "300" %>
+        <%= f.submit "300", class: 'cat_btn' %>
     <%end%></div>
-    <div class="grid-item"><%= form_with url: api_request_path(@game.id) do |f| %>
+    <div class="grid-item-button"><%= form_with url: api_request_path(@game.id) do |f| %>
         <%= f.hidden_field :category, value: @game.category_1 %>
         <%= f.hidden_field :difficulty, value: "hard" %>
-        <%= f.submit "500" %>
+        <%= f.submit "500", class: 'cat_btn' %>
     <%end%></div>
-    <div class="grid-item"><%= form_with url: api_request_path(@game.id) do |f| %>
+    <div class="grid-item-button"><%= form_with url: api_request_path(@game.id) do |f| %>
         <%= f.hidden_field :category, value: @game.category_2 %>
         <%= f.hidden_field :difficulty, value: "hard" %>
-        <%= f.submit "500" %>
+        <%= f.submit "500", class: 'cat_btn' %>
     <%end%></div>
-    <div class="grid-item"><%= form_with url: api_request_path(@game.id) do |f| %>
+    <div class="grid-item-button"><%= form_with url: api_request_path(@game.id) do |f| %>
         <%= f.hidden_field :category, value: @game.category_3 %>
         <%= f.hidden_field :difficulty, value: "hard" %>
-        <%= f.submit "500" %>
+        <%= f.submit "500", class: 'cat_btn' %>
     <%end%></div>
-    <div class="grid-item"><%= form_with url: api_request_path(@game.id) do |f| %>
+    <div class="grid-item-button"><%= form_with url: api_request_path(@game.id) do |f| %>
         <%= f.hidden_field :category, value: @game.category_4 %>
         <%= f.hidden_field :difficulty, value: "hard" %>
-        <%= f.submit "500" %>
+        <%= f.submit "500", class: 'cat_btn' %>
     <%end%></div>
-    <div class="grid-item"><%= form_with url: api_request_path(@game.id) do |f| %>
+    <div class="grid-item-button"><%= form_with url: api_request_path(@game.id) do |f| %>
         <%= f.hidden_field :category, value: @game.category_5 %>
         <%= f.hidden_field :difficulty, value: "hard" %>
-        <%= f.submit "500" %>
+        <%= f.submit "500", class: 'cat_btn' %>
     <%end%></div>
 </div>
 <br><br><br><br><br><br><br><br><br>

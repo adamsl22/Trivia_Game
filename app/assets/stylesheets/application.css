@@ -22,4 +22,58 @@
     background-size: cover;
 }      
 
+.btntowel   {
+    border: 2px solid #34495e;
+    background: #3498db;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-family: "montserrat"
+    margin 10px;
+}
+
+.btntowel:hover {
+    color: #ecf0f1
+}
+
+
+.cat_btn   {
+    border: 2px solid #34495e;
+    background: #3498db;
+    padding: 30px 50px;
+    font-size: 30px;
+    font-family: "montserrat"
+    margin 20px;
+}
+
+.cat_btn:hover {
+    color: #ecf0f1
+}
+
+.q_btn   {
+    border: 2px groove #34495e;
+    background: #3498db;
+    font-size: 30px;
+    font-family: "montserrat"
+    margin 20px;
+}
+
+.q_btn:hover {
+    color: #ecf0f1
+}
+
+.signup_btn    {
+    background-color: transparent;
+    border: 0;
+    color: type-light;
+    font-family: 'Open Sans', sans-serif; font-weight: bold;
+    font-size: 15px;
+    line-height: 1;
+    margin-top: 1.8rem;
+    transition: none;
+    border: 1px groove #111;
+}
+
+.signup_btn:hover {
+    color: #ecf0f1
+}
 
