@@ -14,14 +14,13 @@
  *= require_self
  */
 
-body  {
-    /* background-image: linear-gradient(to bottom right, rgba(208, 205, 201, 0.475), rgba(77, 74, 74, 0.514)), url('https://lh3.googleusercontent.com/uymYjet8LNywAiGRwvn4M6VIEF_gC4Nq3PHUiLSPmBfTgvEXz7Tn3_Z8yZ0cZPc-EGEqv6CRI2xZNeIxGzNImCRLDLmygfIFhb7lBze3qC02qoUwQwivixYifTu2epwclC3Gz1500V6Ku1bqboBvNpdGIvoFAf2NQYnvAgyy8ZuAA9C6M7tmljmC9cfMOZqN9uWjz4aUc7SZwD7VHxl1uiX5PuC3O8aMwCW_YTb0UMT7IKrXgiaD9YewIoBMS-TZgfguDdPjOqRLg2bksRhlQjRbadaX3fri6LkO3rKVoE6pACLUs8ETMsKjDFMFm5KABzHdre1rYcbSr_OrJn-OxPnxsHw2H9xha2CFTROmF5cZCePUV2484zrYzYy89GhMDL6-lerh65GXEO5kyfOw-atCTBQqmIetg6quTPsbfbp0gQF_z4bqLbb_FI_5fr0dL4w3P-_MWGlQyKCR0kiqciOZLw-l0Z3e-VVrsJDz7e9QqQKEOEAl8Ucr2fz4kT0VCHLrhaytLrcQjSdVsn_yxmpvXhQRPeDFjHUdLHAbfVok0yVUSqxXgcTvr_0rrsNf1bEXH0wNhl9iooq-j6Vjp8kbdRbdOOaltt4EKBz9W-l36m1OtgJEENJksvapoRGJGMR5GQZ1kR4xIJmgv3T3_65WHC0UUSnqvPr6OQLnb-8qILPHOta05aE=w2958-h1972-no'); */
-    background-color: #e3ba26;
+ body  {
+    background-image: url('Trivia_Background.png');
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-}    
+}      
 
 .btntowel   {
     border: 2px solid #34495e;
