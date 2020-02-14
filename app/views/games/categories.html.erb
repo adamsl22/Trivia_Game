@@ -84,8 +84,9 @@
     <%end%></div>
 </div>
 <br><br><br><br><br><br><br><br><br>
-<%= button_to "Exit Game", welcome_path, method: :get %>
+<%= button_to "Exit Game", welcome_path, method: :get, class: "signup_btn" %>
 <br><br>
-<% @gus.each do |gu| %>
+<a class="users"><% @gus.each do |gu| %>
     <%= " | " + gu.user.user_name + " | " + gu.score.to_s + " | " %>
 <%end%>
+</a>

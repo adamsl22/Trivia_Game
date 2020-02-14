@@ -1,9 +1,9 @@
-<h1><%= @user.user_name %> </h1>
+<h1 class="profile_u"><%= @user.user_name %> </h1>
 <% if @user.blurb %>
     <%= @user.blurb %><br><br>
 <% end %>
-Lifetime Points: <%= @user.lifetime_points %><br>
-Level: <%= @user.level %><br><br><br>
-<%= button_to "Home", welcome_path, method: :get %><br>
-<%= button_to "Edit Account", edit_profile_path, method: :get %><br>
-<%= button_to "Log Out", '/logout', method: :delete %>
+<a class="profile_u">Lifetime Points: <%= @user.lifetime_points %></a><br>
+<a class="profile_u">Level: <%= @user.level %></a><br><br><br>
+<%= button_to "Home", welcome_path, method: :get, class: "profile_btn" %><br>
+<%= button_to "Edit Account", edit_profile_path, method: :get, class: "profile_btn"  %><br>
+<%= button_to "Log Out", '/logout', method: :delete, class: "profile_btn"  %>

@@ -1,8 +1,8 @@
 <% if @value > 0 %>
-    <h1>Correct!</h1>
+    <h1 class="welcome">Correct!</h1>
 <% else %>
-    <h1>Incorrect</h1>
+    <h1 class="welcome">Incorrect</h1>
 <% end %>
-<h2>You earned <%= @value %> points!</h2>
+<h2 class="welcome">You earned <%= @value %> points!</h2>
 <br><br>
-<%= button_to "Continue", end_turn_path(@game) %>
+<%= button_to "Continue", end_turn_path(@game), class: "signup_btn" %>

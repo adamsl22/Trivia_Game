@@ -68,7 +68,7 @@
     font-family: 'Open Sans', sans-serif; font-weight: bold;
     font-size: 15px;
     line-height: 1;
-    margin-top: 1.8rem;
+    margin-top: 1.5rem;
     transition: none;
     border: 1px groove #111;
 }
@@ -77,3 +77,50 @@
     color: #ecf0f1
 }
 
+.login_btn    {
+    background-color: transparent;
+    border: 0;
+    color: type-light;
+    font-family: 'Open Sans', sans-serif; font-weight: bold;
+    font-size: 15px;
+    line-height: 1;
+    margin-top: 1.5rem;
+    transition: none;
+    border: 1px groove #111;
+}
+
+.login_btn:hover {
+    color: #ecf0f1
+}
+
+.profile_btn    {
+    background-color: transparent;
+    border: 0;
+    color: type-light;
+    font-family: 'Open Sans', sans-serif; font-weight: bold;
+    font-size: 35px;
+    line-height: 1;
+    margin-top: 1.5rem;
+    transition: none;
+    border: 1px groove #111;
+}
+
+.profile_btn:hover {
+    color: #ecf0f1
+}
+
+.start_btn    {
+    background-color: transparent;
+    border: 0;
+    color: type-light;
+    font-family: 'Open Sans', sans-serif; font-weight: bold;
+    font-size: 25px;
+    line-height: 1;
+    margin-top: 1.5rem;
+    transition: none;
+    border: 1px groove #111;
+}
+
+.start_btn:hover {
+    color: #ecf0f1
+}

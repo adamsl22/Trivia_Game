@@ -1,7 +1,7 @@
-<h1>All Players:</h1>
+<h1 class="index">All Players:</h1>
 <% @users.each do |u| %>
-    <p><%= link_to u.user_name, user_path(u) %>
+    <p class="user"><%= link_to u.user_name, user_path(u) %>
          |     Lifetime Points: <%= u.lifetime_points %>     |    Level: <%= u.level %></p>
 <% end %>
 <br><br>
-<%= button_to "Back", welcome_path, method: :get %>
+<%= button_to "Back", welcome_path, method: :get, class: "signup_btn" %>
