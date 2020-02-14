@@ -16,6 +16,15 @@ class Game < ApplicationRecord
         end
     end
 
+    def check_for_draw
+        top_scorers = self.game_users.select{|gu| gu.score == self.winning_player.score}
+        if top_scorers.count > 1
+            return true
+        else
+            return false
+        end
+    end
+
     def self.question_category(question_hash)
         question_hash[0]["category"]
     end
