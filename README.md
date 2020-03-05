@@ -1,24 +1,7 @@
-# README
+# Welcome to Best Guess It by Adam Longman and Steven Zhu
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Note: This game requires an internet connection.
 
-Things you may want to cover:
+After cloning, run rails db:migrate and then rails s. The game can then be played on localhost:3000.
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Ruby version: ruby 2.6.1p33
