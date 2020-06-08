@@ -4,7 +4,7 @@
 
 Note: This game requires an internet connection.
 
-[Check out the video demo here.](https://youtu.be/xT31G00VX8g)
+[Check out the video demo here.](https://youtu.be/NDyZWmGQOIs)
 
 <!-- After cloning, run rails db:migrate and then rails s. The game can then be played on localhost:3000. -->
 
